@@ -115,7 +115,7 @@ const addToCartHandler = () => {
                   Price: {addCurrency(product.price)}
                 </ListGroup.Item>
                 <ListGroup.Item>
-                  <strong> About this item:&nbsp</strong>
+                  <strong> About this item:&nbsp;</strong>
                   {product.description}
                 </ListGroup.Item>
               </ListGroup>
