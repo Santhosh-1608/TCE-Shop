@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { Button, Form, InputGroup } from 'react-bootstrap';
 import { setCredentials } from '../slices/authSlice';
 import { toast } from 'react-toastify';
-import { useDispatch, useSelector } from 'react-redux';
+import { useDispatch } from 'react-redux';
 import { useProfileMutation } from '../slices/usersApiSlice';
 import { FaEye, FaEyeSlash } from 'react-icons/fa';
 import Loader from './Loader';

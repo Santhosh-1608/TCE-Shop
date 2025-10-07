@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { Button, Card } from 'react-bootstrap';
-import { Link, useNavigate } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import { useDispatch } from 'react-redux';
 import { addCurrency } from '../utils/addCurrency';
 import { addToCart } from '../slices/cartSlice';
