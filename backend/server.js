@@ -4,6 +4,7 @@ import cors from 'cors';
 import compression from 'compression';
 import 'dotenv/config';
 import { fileURLToPath } from 'url';
+import path from 'path';
 
 import productRoutes from './routes/productRoutes.js';
 import userRoutes from './routes/userRoutes.js';
