@@ -4,6 +4,7 @@ import cookieParser from 'cookie-parser';
 import cors from 'cors';
 import compression from 'compression';
 import 'dotenv/config';
+import { fileURLToPath } from 'url';
 
 import productRoutes from './routes/productRoutes.js';
 import userRoutes from './routes/userRoutes.js';
@@ -27,7 +28,9 @@ app.use(cookieParser());
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
-const __dirname = path.resolve(); // Set {__dirname} to current working directory
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
+
 app.use('/uploads', express.static(path.join(__dirname, 'uploads')));
 
 app.use('/api/v1/products', productRoutes);
@@ -37,12 +40,11 @@ app.use('/api/v1/upload', uploadRoutes);
 app.use('/api/v1/payment', paymentRoutes);
 //-------------------------------------
 if (process.env.NODE_ENV === 'production') {
-  app.use(express.static(path.join(__dirname, '/frontend/build')));
+  app.use(express.static(path.join(__dirname, '../frontend/build')));
 
-  //any app route that is not api will redirected to index.html
-  app.get('*', (req, res) => {
-    res.sendFile(path.resolve(__dirname, 'frontend', 'build', 'index.html'));
-  });
+  app.get('*', (req, res) =>
+    res.sendFile(path.resolve(__dirname, '../frontend', 'build', 'index.html'))
+  );
 } else {
   app.get('/', (req, res) => {
     res.send('Hello, World!');
