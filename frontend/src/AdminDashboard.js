@@ -1,10 +1,8 @@
 import React from 'react';
 import {
-  Card,
   Col,
   Container,
   Nav,
-  NavDropdown,
   Navbar,
   Row
 } from 'react-bootstrap';
@@ -16,7 +14,6 @@ import { useSelector } from 'react-redux';
 import AdminSidebar from './components/Admin/AdminSidebar';
 
 const AdminDashboard = () => {
-  const { userInfo } = useSelector(state => state.auth);
 
   return (
     <div className='position-relative'>

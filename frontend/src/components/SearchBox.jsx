@@ -2,9 +2,7 @@ import React, { useState } from 'react';
 import {
   Form,
   Button,
-  InputGroup,
-  OverlayTrigger,
-  Tooltip
+  InputGroup
 } from 'react-bootstrap';
 import { FaSearch, FaTimes } from 'react-icons/fa';
 import { useDispatch } from 'react-redux';

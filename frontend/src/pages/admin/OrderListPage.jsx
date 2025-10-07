@@ -1,7 +1,6 @@
-import React, { useEffect } from 'react';
 import { Table, Button } from 'react-bootstrap';
 import { LinkContainer } from 'react-router-bootstrap';
-import { FaIndianRupeeSign, FaXmark } from 'react-icons/fa6';
+import { FaXmark } from 'react-icons/fa6';
 import { FaCheck } from 'react-icons/fa';
 import { useGetOrdersQuery } from '../../slices/ordersApiSlice';
 import Loader from '../../components/Loader';

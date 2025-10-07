@@ -10,7 +10,7 @@ import {
   Form,
   ListGroupItem
 } from 'react-bootstrap';
-import { Link, useParams, useNavigate } from 'react-router-dom';
+import { Link, useParams } from 'react-router-dom';
 import { useDispatch, useSelector } from 'react-redux';
 import {
   useGetProductDetailsQuery,
@@ -42,7 +42,6 @@ const ProductPage = () => {
   const [createProductReview, { isLoading: isCreateProductReviewLoading }] =
     useCreateProductReviewMutation();
 
-  const navigate = useNavigate();
   const dispatch = useDispatch();
 
 const addToCartHandler = () => {

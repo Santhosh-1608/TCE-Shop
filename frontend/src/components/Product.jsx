@@ -7,9 +7,8 @@ import { addToCart } from '../slices/cartSlice';
 import Rating from './Rating';
 import { toast } from 'react-toastify';
 const Product = ({ product }) => {
-  const [qty, setQty] = useState(1);
+  const [qty] = useState(1);
   const dispatch = useDispatch();
-  const navigate = useNavigate();
 
 
 
